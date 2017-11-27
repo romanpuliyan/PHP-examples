@@ -97,7 +97,7 @@ class TableController extends Controller
 
         // PAGE AND PER_PAGE
         $options = Yii::$app->params;
-        $page = $options['firstPage'];
+        $page    = $options['firstPage'];
         $perPage = $options['perPage'];
         if(isset($params['page'])) {
             $page = $params['page'];
@@ -146,7 +146,7 @@ class TableController extends Controller
         $pageCount = $itemService->getPageCount();
 
         return [
-            'data' => $items,
+            'data'      => $items,
             'last_page' => $pageCount
         ];
     }
